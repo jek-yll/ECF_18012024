@@ -1,10 +1,8 @@
--- Insert fake data into department table
 INSERT INTO department (department_name) VALUES
 ('Computer Science'),
 ('Mathematics'),
 ('History');
 
--- Insert fake data into teacher table
 INSERT INTO teacher (registration_nbr, teacher_firstname, teacher_lastname, teacher_date_birth, teacher_grade, department_id) VALUES
 ('T001', 'John', 'Doe', '1980-05-15', 10, 1),
 ('T002', 'Jane', 'Smith', '1985-08-22', 8, 2),
@@ -14,7 +12,6 @@ UPDATE department SET department_manager_id = 1 WHERE department_id = 1;
 UPDATE department SET department_manager_id = 2 WHERE department_id = 3;
 UPDATE department SET department_manager_id = 3 WHERE department_id = 2;
 
--- Insert fake data into subject table
 INSERT INTO subject (subject_title, subject_description, subject_duration, subject_coefficient) VALUES
 ('Introduction to Programming', 'Basic programming concepts and techniques', 45, 3),
 ('Algebra', 'Fundamental algebraic concepts', 60, 4),
@@ -23,7 +20,6 @@ INSERT INTO subject (subject_title, subject_description, subject_duration, subje
 ('Literature', 'Study of classic literature', 40, 2),
 ('Physical Education', 'Physical fitness and health', 30, 1);
 
--- Insert fake data into class table
 INSERT INTO class (class_name, class_level, department_id) VALUES
 ('CS101', 'Freshman', 1),
 ('MATH201', 'Sophomore', 2),
@@ -33,13 +29,11 @@ UPDATE teacher SET head_teacher_class_id = 1 WHERE teacher_id = 1;
 UPDATE teacher SET head_teacher_class_id = 2 WHERE teacher_id = 2;
 UPDATE teacher SET head_teacher_class_id = 3 WHERE teacher_id = 3;
 
--- Insert fake data into student table
 INSERT INTO student (student_firstname, student_lastname, student_email, student_date_birth, class_id) VALUES
 ('Alice', 'Johnson', 'alice@gmail.com', '2000-03-08', 1),
 ('Bob', 'Smith', 'bob@gmail.com', '2001-07-15', 2),
 ('Charlie', 'Williams', 'charlie@gmail.com', '1999-01-22', 3);
 
--- Insert fake data into grade_student table
 INSERT INTO grade_student (student_id, grade_student_value, grade_student_comment, subject_id) VALUES
 (1, 02, 'Good performance', 1),
 (1, 15, 'Excellent work', 2),
@@ -48,13 +42,11 @@ INSERT INTO grade_student (student_id, grade_student_value, grade_student_commen
 (2, 18, 'Excellent work', 2),
 (3, 12, 'Satisfactory progress', 3);
 
--- Insert fake data into teach table
 INSERT INTO teach (teacher_id, subject_id) VALUES
 (1, 1),
 (2, 2),
 (3, 3);
 
--- Insert fake data into timetable table
 INSERT INTO timetable (teacher_id, subject_id, class_id, timetable_hour, timetable_day) VALUES
 (1, 1, 1, '09:00:00', 'Monday'),
 (2, 2, 2, '10:30:00', 'Wednesday'),
