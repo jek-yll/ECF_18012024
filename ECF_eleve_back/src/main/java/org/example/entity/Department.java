@@ -19,7 +19,7 @@ public class Department {
     private Integer departmentManagerId;
 
     @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Class> classes ;
+    private List<Classe> classes ;
 
     public Department( String departmentName, Integer departmentManagerId) {
         this.departmentName = departmentName;
@@ -54,11 +54,11 @@ public class Department {
         this.departmentManagerId = departmentManagerId;
     }
 
-    public List<Class> getClasses() {
+    public List<Classe> getClasses() {
         return classes;
     }
 
-    public void setClasses(List<Class> classes) {
+    public void setClasses(List<Classe> classes) {
         this.classes = classes;
     }
 }

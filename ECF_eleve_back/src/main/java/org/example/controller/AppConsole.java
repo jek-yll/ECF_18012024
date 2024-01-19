@@ -49,11 +49,8 @@ public class AppConsole {
         System.out.println("2- Creation d'un enseignant");
         System.out.println("3- Creation d'un etudiant");
         System.out.println("4- Creation d'une matière");
-        System.out.println("5- Creation d'une note");
+        System.out.println("5- Ajout d'une note");
         System.out.println("6- Creation d'une classe");
-        System.out.println("7- Ajouter une note");
-
-
 
     }
 
@@ -101,7 +98,6 @@ public class AppConsole {
         } else {
             System.out.println("Echec lors de l'enregistrement de l'enseignant");
         }
-
     }
 
     public void createStudent(){

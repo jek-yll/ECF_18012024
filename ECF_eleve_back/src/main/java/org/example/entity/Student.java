@@ -26,12 +26,12 @@ public class Student {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "class_id", nullable = false)
-    private Class classField;
+    private Classe classField;
 
     @OneToMany(mappedBy = "student")
     private List<GradeStudent> gradeStudents;
 
-    public Student(Integer id, String studentFirstname, String studentLastname, String studentEmail, LocalDate studentDateBirth, Class classField, List<GradeStudent> gradeStudents) {
+    public Student(Integer id, String studentFirstname, String studentLastname, String studentEmail, LocalDate studentDateBirth, Classe classField, List<GradeStudent> gradeStudents) {
         this.id = id;
         this.studentFirstname = studentFirstname;
         this.studentLastname = studentLastname;
@@ -39,6 +39,13 @@ public class Student {
         this.studentDateBirth = studentDateBirth;
         this.classField = classField;
         this.gradeStudents = gradeStudents;
+    }
+
+    public Student(String studentFirstname, String studentLastname, String studentEmail, LocalDate studentDateBirth) {
+        this.studentFirstname = studentFirstname;
+        this.studentLastname = studentLastname;
+        this.studentEmail = studentEmail;
+        this.studentDateBirth = studentDateBirth;
     }
 
     public Student() {
@@ -84,11 +91,11 @@ public class Student {
         this.studentDateBirth = studentDateBirth;
     }
 
-    public Class getClassField() {
+    public Classe getClassField() {
         return classField;
     }
 
-    public void setClassField(Class classField) {
+    public void setClassField(Classe classField) {
         this.classField = classField;
     }
 
@@ -99,4 +106,6 @@ public class Student {
     public void setGradeStudents(List<GradeStudent> gradeStudents) {
         this.gradeStudents = gradeStudents;
     }
+
+
 }

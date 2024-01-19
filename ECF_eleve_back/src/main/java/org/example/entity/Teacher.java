@@ -30,7 +30,7 @@ public class Teacher {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "head_teacher_class_id")
-    private Class headTeacherClass;
+    private Classe headTeacherClass;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id")
@@ -50,7 +50,7 @@ public class Teacher {
                     String teacherLastname,
                     LocalDate teacherDateBirth,
                     Integer teacherGrade,
-                    Class headTeacherClass,
+                    Classe headTeacherClass,
                     Department department,
                     List<Subject> subjects,
                     List<Timetable> timetables) {
@@ -129,11 +129,11 @@ public class Teacher {
         this.teacherGrade = teacherGrade;
     }
 
-    public Class getHeadTeacherClass() {
+    public Classe getHeadTeacherClass() {
         return headTeacherClass;
     }
 
-    public void setHeadTeacherClass(Class headTeacherClass) {
+    public void setHeadTeacherClass(Classe headTeacherClass) {
         this.headTeacherClass = headTeacherClass;
     }
 

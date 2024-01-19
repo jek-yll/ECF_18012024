@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "class")
-public class Class {
+public class Classe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "class_id", nullable = false)
@@ -20,14 +20,14 @@ public class Class {
     @JoinColumn(name = "department_id", nullable = false)
     private Department department;
 
-    public Class(Integer id, String className, String classLevel, Department department) {
+    public Classe(Integer id, String className, String classLevel, Department department) {
         this.id = id;
         this.className = className;
         this.classLevel = classLevel;
         this.department = department;
     }
 
-    public Class() {
+    public Classe() {
     }
 
     public Integer getId() {

@@ -1,8 +1,6 @@
 package org.example.service;
 
-import org.example.entity.Department;
 import org.example.entity.Teacher;
-import org.example.impl.DepartmentDAOImpl;
 import org.example.impl.TeacherDAOImpl;
 
 import java.time.LocalDate;
